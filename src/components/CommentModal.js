@@ -38,15 +38,15 @@ const CommentModal = () => {
   const userListButtonRef = useRef(null);
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
+  let APIurl = "https://mocki.io/v1/b0c7d7ea-5d09-4b9c-8d4b-c1b40cc39bc9";
+
   useEffect(() => {
     fetchComments();
   }, []);
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(
-        "https://mocki.io/v1/b0c7d7ea-5d09-4b9c-8d4b-c1b40cc39bc9"
-      );
+      const response = await fetch(APIurl);
       const data = await response.json();
       console.log("comments", data.comments);
 
