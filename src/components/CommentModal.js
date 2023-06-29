@@ -44,7 +44,6 @@ const CommentModal = () => {
 
   const fetchComments = async () => {
     try {
-      // Replace the URL with the actual API endpoint for fetching comments
       const response = await fetch(
         "https://mocki.io/v1/b0c7d7ea-5d09-4b9c-8d4b-c1b40cc39bc9"
       );
